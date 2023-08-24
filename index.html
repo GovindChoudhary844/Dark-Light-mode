@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark mode || light mode</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css"> -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary-color: #edf2f2;
+      --secondary-color: #212121;
+    }
+
+    .dark-theme {
+      --primary-color: #000106;
+      --secondary-color: #fff;
+    }
+
+    #icon {
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .navbar {
+      background-color: var(--primary-color);
+    }
+
+    .navbar-brand {
+      color: var(--secondary-color);
+    }
+
+    .nav-link {
+      color: var(--secondary-color);
+    }
+    .nav-link:hover {
+      color: gainsboro;
+    }
+
+    body {
+      background-color: var(--primary-color);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="nav collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" style="margin-right: 50px;" type="submit">Search</button>
+        </form>
+        <img src="dark theme icon/moon.png" id="icon" style="margin-left:10px;">
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="card m-5" style="width: 18rem;">
+    <img src="https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/07/SolarFull_SeanDoran_2880FullwidthLede.jpg"
+      class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card m-5" style="width: 18rem;">
+    <img src="https://cdn.mos.cms.futurecdn.net/dBFuYGruGdT95wFwHEu5VM.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+
+<script>
+  var icon = document.getElementById("icon");
+
+  icon.onclick=function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+      icon.src="dark theme icon/sun.png";
+    }
+    else{
+      icon.src="dark theme icon/moon.png";
+
+    }
+  }
+</script>
+  
+</body>
+
+</html>
