@@ -19,11 +19,15 @@
     :root {
       --primary-color: #edf2f2;
       --secondary-color: #212121;
+      --third-color: linear-gradient(rgb(225, 76, 12),rgb(227, 198, 177));
+    
     }
 
     .dark-theme {
       --primary-color: #000106;
       --secondary-color: #fff;
+      --third-color: linear-gradient(rgb(9, 82, 110),skyblue);
+
     }
 
     #icon {
@@ -42,6 +46,7 @@
     .nav-link {
       color: var(--secondary-color);
     }
+
     .nav-link:hover {
       color: gainsboro;
     }
@@ -49,6 +54,22 @@
     body {
       background-color: var(--primary-color);
     }
+
+    .modes {
+      height: 45px;
+      background:var(--third-color) ;
+      width: 5%;
+      float: right;
+      position: fixed;
+      z-index: 1;
+      border-radius: 10px 0 0 10px;
+      margin-left: 95%;
+      margin-top: 35%;
+    }
+    .modes img {
+      margin-top: 8px;
+    }
+
   </style>
 
 </head>
@@ -93,12 +114,13 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" style="margin-right: 50px;" type="submit">Search</button>
         </form>
-        <img src="dark theme icon/moon.png" id="icon" style="margin-left:10px;">
       </div>
     </div>
   </nav>
 
-
+  <div class="modes">
+    <img src="dark theme icon/moon.png" id="icon" style="margin-left:10px;">
+  </div>
   <div class="card m-5" style="width: 18rem;">
     <img src="https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/07/SolarFull_SeanDoran_2880FullwidthLede.jpg"
       class="card-img-top" alt="...">
@@ -120,21 +142,21 @@
   </div>
 
 
-<script>
-  var icon = document.getElementById("icon");
+  <script>
+    var icon = document.getElementById("icon");
 
-  icon.onclick=function(){
-    document.body.classList.toggle("dark-theme");
-    if(document.body.classList.contains("dark-theme")){
-      icon.src="dark theme icon/sun.png";
-    }
-    else{
-      icon.src="dark theme icon/moon.png";
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "dark theme icon/sun.png";
+      }
+      else {
+        icon.src = "dark theme icon/moon.png";
 
+      }
     }
-  }
-</script>
-  
+  </script>
+
 </body>
 
 </html>
